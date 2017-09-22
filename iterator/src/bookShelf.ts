@@ -1,7 +1,9 @@
 import { Aggregate } from './aggregate'
 import { Book } from './book'
 import { Iterator } from './iterator'
+import { ReverseIterator } from './reverseIterator'
 import { BookShelfIterator } from './bookShelfIterator'
+import { BookShelfReverseIterator } from './bookShelfReverseIterator'
 
 export class BookShelf implements Aggregate {
     private books: Book[];
@@ -25,5 +27,9 @@ export class BookShelf implements Aggregate {
 
     public iterator(): Iterator {
         return new BookShelfIterator(this);
+    }
+
+    public reverseIterator(): ReverseIterator {
+        return new BookShelfReverseIterator(this);
     }
 }

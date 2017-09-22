@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var bookShelfIterator_1 = require("./bookShelfIterator");
+var bookShelfReverseIterator_1 = require("./bookShelfReverseIterator");
 var BookShelf = (function () {
     function BookShelf(maxsize) {
         this.last = 0;
@@ -21,6 +22,9 @@ var BookShelf = (function () {
     });
     BookShelf.prototype.iterator = function () {
         return new bookShelfIterator_1.BookShelfIterator(this);
+    };
+    BookShelf.prototype.reverseIterator = function () {
+        return new bookShelfReverseIterator_1.BookShelfReverseIterator(this);
     };
     return BookShelf;
 }());
