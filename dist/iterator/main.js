@@ -60,101 +60,19 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 13);
+/******/ 	return __webpack_require__(__webpack_require__.s = 17);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */,
-/* 1 */,
-/* 2 */
+/******/ ({
+
+/***/ 10:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var BookShelfIterator = /** @class */ (function () {
-    function BookShelfIterator(bookShelf) {
-        this.bookShelf = bookShelf;
-        this.index = 0;
-    }
-    BookShelfIterator.prototype.hasNext = function () {
-        if (this.index < this.bookShelf.length) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    };
-    BookShelfIterator.prototype.next = function () {
-        return this.bookShelf.getBookAt(this.index++);
-    };
-    return BookShelfIterator;
-}());
-exports.BookShelfIterator = BookShelfIterator;
-
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var BookShelfReverseIterator = /** @class */ (function () {
-    function BookShelfReverseIterator(bookShelf) {
-        this.bookShelf = bookShelf;
-        this.index = bookShelf.length - 1;
-    }
-    BookShelfReverseIterator.prototype.hasPrev = function () {
-        if (this.index >= 0) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    };
-    BookShelfReverseIterator.prototype.prev = function () {
-        return this.bookShelf.getBookAt(this.index--);
-    };
-    return BookShelfReverseIterator;
-}());
-exports.BookShelfReverseIterator = BookShelfReverseIterator;
-
-
-/***/ }),
-/* 4 */,
-/* 5 */,
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var Book = /** @class */ (function () {
-    function Book(name) {
-        this.name_ = name;
-    }
-    Object.defineProperty(Book.prototype, "name", {
-        get: function () {
-            return this.name_;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    return Book;
-}());
-exports.Book = Book;
-
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var bookShelfIterator_1 = __webpack_require__(2);
-var bookShelfReverseIterator_1 = __webpack_require__(3);
+var bookShelfIterator_1 = __webpack_require__(4);
+var bookShelfReverseIterator_1 = __webpack_require__(5);
 var BookShelf = /** @class */ (function () {
     function BookShelf(maxsize) {
         this.last = 0;
@@ -185,19 +103,15 @@ exports.BookShelf = BookShelf;
 
 
 /***/ }),
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */
+
+/***/ 17:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var bookShelf_1 = __webpack_require__(7);
-var book_1 = __webpack_require__(6);
+var bookShelf_1 = __webpack_require__(10);
+var book_1 = __webpack_require__(9);
 var bookShelf = new bookShelf_1.BookShelf(4);
 bookShelf.appendBook(new book_1.Book("こころ"));
 bookShelf.appendBook(new book_1.Book("人間失格"));
@@ -215,5 +129,88 @@ while (rit.hasPrev()) {
 }
 
 
+/***/ }),
+
+/***/ 4:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var BookShelfIterator = /** @class */ (function () {
+    function BookShelfIterator(bookShelf) {
+        this.bookShelf = bookShelf;
+        this.index = 0;
+    }
+    BookShelfIterator.prototype.hasNext = function () {
+        if (this.index < this.bookShelf.length) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+    BookShelfIterator.prototype.next = function () {
+        return this.bookShelf.getBookAt(this.index++);
+    };
+    return BookShelfIterator;
+}());
+exports.BookShelfIterator = BookShelfIterator;
+
+
+/***/ }),
+
+/***/ 5:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var BookShelfReverseIterator = /** @class */ (function () {
+    function BookShelfReverseIterator(bookShelf) {
+        this.bookShelf = bookShelf;
+        this.index = bookShelf.length - 1;
+    }
+    BookShelfReverseIterator.prototype.hasPrev = function () {
+        if (this.index >= 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+    BookShelfReverseIterator.prototype.prev = function () {
+        return this.bookShelf.getBookAt(this.index--);
+    };
+    return BookShelfReverseIterator;
+}());
+exports.BookShelfReverseIterator = BookShelfReverseIterator;
+
+
+/***/ }),
+
+/***/ 9:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var Book = /** @class */ (function () {
+    function Book(name) {
+        this.name_ = name;
+    }
+    Object.defineProperty(Book.prototype, "name", {
+        get: function () {
+            return this.name_;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Book;
+}());
+exports.Book = Book;
+
+
 /***/ })
-/******/ ]);
+
+/******/ });

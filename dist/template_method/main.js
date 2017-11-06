@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 15);
+/******/ 	return __webpack_require__(__webpack_require__.s = 19);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -250,50 +250,14 @@ function __asyncValues(o) {
 
 /***/ }),
 
-/***/ 15:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var stringDisplay_1 = __webpack_require__(8);
-var d1 = new stringDisplay_1.StringDisplay("hogehoge");
-d1.display();
-
-
-/***/ }),
-
-/***/ 4:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var AbstractDisplay = /** @class */ (function () {
-    function AbstractDisplay() {
-    }
-    AbstractDisplay.prototype.display = function () {
-        this.open();
-        for (var _i = 0; _i < 5; _i++) {
-            this.print();
-        }
-        this.close();
-    };
-    return AbstractDisplay;
-}());
-exports.AbstractDisplay = AbstractDisplay;
-
-
-/***/ }),
-
-/***/ 8:
+/***/ 11:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = __webpack_require__(0);
-var abstractDisplay_1 = __webpack_require__(4);
+var abstractDisplay_1 = __webpack_require__(6);
 var StringDisplay = /** @class */ (function (_super) {
     tslib_1.__extends(StringDisplay, _super);
     function StringDisplay(string) {
@@ -312,6 +276,42 @@ var StringDisplay = /** @class */ (function (_super) {
     return StringDisplay;
 }(abstractDisplay_1.AbstractDisplay));
 exports.StringDisplay = StringDisplay;
+
+
+/***/ }),
+
+/***/ 19:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var stringDisplay_1 = __webpack_require__(11);
+var d1 = new stringDisplay_1.StringDisplay("hogehoge");
+d1.display();
+
+
+/***/ }),
+
+/***/ 6:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var AbstractDisplay = /** @class */ (function () {
+    function AbstractDisplay() {
+    }
+    AbstractDisplay.prototype.display = function () {
+        this.open();
+        for (var _i = 0; _i < 5; _i++) {
+            this.print();
+        }
+        this.close();
+    };
+    return AbstractDisplay;
+}());
+exports.AbstractDisplay = AbstractDisplay;
 
 
 /***/ })

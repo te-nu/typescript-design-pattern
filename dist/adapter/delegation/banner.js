@@ -60,19 +60,31 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 14:
+/******/ ([
+/* 0 */,
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+var Banner = /** @class */ (function () {
+    function Banner(string) {
+        this.string_ = string;
+    }
+    Banner.prototype.showWithParen = function () {
+        console.log("(" + this.string_ + ")");
+    };
+    Banner.prototype.showWithAster = function () {
+        console.log("*" + this.string_ + "*");
+    };
+    return Banner;
+}());
+exports.Banner = Banner;
 
 
 /***/ })
-
-/******/ });
+/******/ ]);

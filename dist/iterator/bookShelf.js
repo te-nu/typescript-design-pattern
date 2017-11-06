@@ -60,79 +60,19 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */,
-/* 1 */,
-/* 2 */
+/******/ ({
+
+/***/ 10:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var BookShelfIterator = /** @class */ (function () {
-    function BookShelfIterator(bookShelf) {
-        this.bookShelf = bookShelf;
-        this.index = 0;
-    }
-    BookShelfIterator.prototype.hasNext = function () {
-        if (this.index < this.bookShelf.length) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    };
-    BookShelfIterator.prototype.next = function () {
-        return this.bookShelf.getBookAt(this.index++);
-    };
-    return BookShelfIterator;
-}());
-exports.BookShelfIterator = BookShelfIterator;
-
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var BookShelfReverseIterator = /** @class */ (function () {
-    function BookShelfReverseIterator(bookShelf) {
-        this.bookShelf = bookShelf;
-        this.index = bookShelf.length - 1;
-    }
-    BookShelfReverseIterator.prototype.hasPrev = function () {
-        if (this.index >= 0) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    };
-    BookShelfReverseIterator.prototype.prev = function () {
-        return this.bookShelf.getBookAt(this.index--);
-    };
-    return BookShelfReverseIterator;
-}());
-exports.BookShelfReverseIterator = BookShelfReverseIterator;
-
-
-/***/ }),
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var bookShelfIterator_1 = __webpack_require__(2);
-var bookShelfReverseIterator_1 = __webpack_require__(3);
+var bookShelfIterator_1 = __webpack_require__(4);
+var bookShelfReverseIterator_1 = __webpack_require__(5);
 var BookShelf = /** @class */ (function () {
     function BookShelf(maxsize) {
         this.last = 0;
@@ -162,5 +102,64 @@ var BookShelf = /** @class */ (function () {
 exports.BookShelf = BookShelf;
 
 
+/***/ }),
+
+/***/ 4:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var BookShelfIterator = /** @class */ (function () {
+    function BookShelfIterator(bookShelf) {
+        this.bookShelf = bookShelf;
+        this.index = 0;
+    }
+    BookShelfIterator.prototype.hasNext = function () {
+        if (this.index < this.bookShelf.length) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+    BookShelfIterator.prototype.next = function () {
+        return this.bookShelf.getBookAt(this.index++);
+    };
+    return BookShelfIterator;
+}());
+exports.BookShelfIterator = BookShelfIterator;
+
+
+/***/ }),
+
+/***/ 5:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var BookShelfReverseIterator = /** @class */ (function () {
+    function BookShelfReverseIterator(bookShelf) {
+        this.bookShelf = bookShelf;
+        this.index = bookShelf.length - 1;
+    }
+    BookShelfReverseIterator.prototype.hasPrev = function () {
+        if (this.index >= 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+    BookShelfReverseIterator.prototype.prev = function () {
+        return this.bookShelf.getBookAt(this.index--);
+    };
+    return BookShelfReverseIterator;
+}());
+exports.BookShelfReverseIterator = BookShelfReverseIterator;
+
+
 /***/ })
-/******/ ]);
+
+/******/ });

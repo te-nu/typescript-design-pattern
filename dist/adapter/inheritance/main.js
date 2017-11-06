@@ -60,11 +60,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 13);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -248,7 +249,22 @@ function __asyncValues(o) {
 }
 
 /***/ }),
-/* 1 */
+
+/***/ 13:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var printBanner_1 = __webpack_require__(8);
+var p = new printBanner_1.PrintBanner("Hello");
+p.printWeak();
+p.printStrong();
+
+
+/***/ }),
+
+/***/ 3:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -270,17 +286,15 @@ exports.Banner = Banner;
 
 
 /***/ }),
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */
+
+/***/ 8:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = __webpack_require__(0);
-var banner_1 = __webpack_require__(1);
+var banner_1 = __webpack_require__(3);
 var PrintBanner = /** @class */ (function (_super) {
     tslib_1.__extends(PrintBanner, _super);
     function PrintBanner(string) {
@@ -297,21 +311,6 @@ var PrintBanner = /** @class */ (function (_super) {
 exports.PrintBanner = PrintBanner;
 
 
-/***/ }),
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var printBanner_1 = __webpack_require__(5);
-var p = new printBanner_1.PrintBanner("Hello");
-p.printWeak();
-p.printStrong();
-
-
 /***/ })
-/******/ ]);
+
+/******/ });
