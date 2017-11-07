@@ -248,7 +248,8 @@ function __asyncValues(o) {
 }
 
 /***/ }),
-/* 1 */
+/* 1 */,
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -270,7 +271,7 @@ exports.Banner = Banner;
 
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -285,7 +286,6 @@ exports.Print = Print;
 
 
 /***/ }),
-/* 3 */,
 /* 4 */,
 /* 5 */,
 /* 6 */,
@@ -296,12 +296,12 @@ exports.Print = Print;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = __webpack_require__(0);
-var banner_1 = __webpack_require__(1);
-var print_1 = __webpack_require__(2);
+var banner_1 = __webpack_require__(2);
+var print_1 = __webpack_require__(3);
 var PrintBanner = /** @class */ (function (_super) {
     tslib_1.__extends(PrintBanner, _super);
     function PrintBanner(string) {
-        var _this = this;
+        var _this = _super.call(this) || this;
         _this.banner = new banner_1.Banner(string);
         return _this;
     }

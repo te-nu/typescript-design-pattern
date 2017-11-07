@@ -1,4 +1,5 @@
 import { AbstractDisplay } from './abstractDisplay';
+
 export class StringDisplay extends AbstractDisplay {
     private st: string;
 

@@ -264,7 +264,7 @@ p.printStrong();
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -294,7 +294,7 @@ exports.Banner = Banner;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = __webpack_require__(0);
-var banner_1 = __webpack_require__(3);
+var banner_1 = __webpack_require__(4);
 var PrintBanner = /** @class */ (function (_super) {
     tslib_1.__extends(PrintBanner, _super);
     function PrintBanner(string) {

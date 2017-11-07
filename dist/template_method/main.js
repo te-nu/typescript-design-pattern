@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 19);
+/******/ 	return __webpack_require__(__webpack_require__.s = 20);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -250,6 +250,29 @@ function __asyncValues(o) {
 
 /***/ }),
 
+/***/ 1:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var AbstractDisplay = /** @class */ (function () {
+    function AbstractDisplay() {
+    }
+    AbstractDisplay.prototype.display = function () {
+        this.open();
+        for (var _i = 0; _i < 5; _i++) {
+            this.print();
+        }
+        this.close();
+    };
+    return AbstractDisplay;
+}());
+exports.AbstractDisplay = AbstractDisplay;
+
+
+/***/ }),
+
 /***/ 11:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -257,7 +280,7 @@ function __asyncValues(o) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = __webpack_require__(0);
-var abstractDisplay_1 = __webpack_require__(6);
+var abstractDisplay_1 = __webpack_require__(1);
 var StringDisplay = /** @class */ (function (_super) {
     tslib_1.__extends(StringDisplay, _super);
     function StringDisplay(string) {
@@ -280,7 +303,7 @@ exports.StringDisplay = StringDisplay;
 
 /***/ }),
 
-/***/ 19:
+/***/ 20:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -289,29 +312,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var stringDisplay_1 = __webpack_require__(11);
 var d1 = new stringDisplay_1.StringDisplay("hogehoge");
 d1.display();
-
-
-/***/ }),
-
-/***/ 6:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var AbstractDisplay = /** @class */ (function () {
-    function AbstractDisplay() {
-    }
-    AbstractDisplay.prototype.display = function () {
-        this.open();
-        for (var _i = 0; _i < 5; _i++) {
-            this.print();
-        }
-        this.close();
-    };
-    return AbstractDisplay;
-}());
-exports.AbstractDisplay = AbstractDisplay;
 
 
 /***/ })

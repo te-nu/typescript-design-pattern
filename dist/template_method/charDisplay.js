@@ -60,11 +60,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 19);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -248,73 +249,58 @@ function __asyncValues(o) {
 }
 
 /***/ }),
-/* 1 */,
-/* 2 */
+
+/***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var Banner = /** @class */ (function () {
-    function Banner(string) {
-        this.string_ = string;
+var AbstractDisplay = /** @class */ (function () {
+    function AbstractDisplay() {
     }
-    Banner.prototype.showWithParen = function () {
-        console.log("(" + this.string_ + ")");
+    AbstractDisplay.prototype.display = function () {
+        this.open();
+        for (var _i = 0; _i < 5; _i++) {
+            this.print();
+        }
+        this.close();
     };
-    Banner.prototype.showWithAster = function () {
-        console.log("*" + this.string_ + "*");
-    };
-    return Banner;
+    return AbstractDisplay;
 }());
-exports.Banner = Banner;
+exports.AbstractDisplay = AbstractDisplay;
 
 
 /***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var Print = /** @class */ (function () {
-    function Print() {
-    }
-    return Print;
-}());
-exports.Print = Print;
-
-
-/***/ }),
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */
+/***/ 19:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = __webpack_require__(0);
-var banner_1 = __webpack_require__(2);
-var print_1 = __webpack_require__(3);
-var PrintBanner = /** @class */ (function (_super) {
-    tslib_1.__extends(PrintBanner, _super);
-    function PrintBanner(string) {
+var abstractDisplay_1 = __webpack_require__(1);
+var CharDisplay = /** @class */ (function (_super) {
+    tslib_1.__extends(CharDisplay, _super);
+    function CharDisplay(ch) {
         var _this = _super.call(this) || this;
-        _this.banner = new banner_1.Banner(string);
+        _this.ch = ch;
         return _this;
     }
-    PrintBanner.prototype.printWeak = function () {
-        this.banner.showWithParen();
+    CharDisplay.prototype.open = function () {
+        console.log("---open---");
     };
-    PrintBanner.prototype.printStrong = function () {
-        this.banner.showWithAster();
+    CharDisplay.prototype.close = function () {
     };
-    return PrintBanner;
-}(print_1.Print));
-exports.PrintBanner = PrintBanner;
+    CharDisplay.prototype.print = function () {
+        console.log(this.ch);
+    };
+    return CharDisplay;
+}(abstractDisplay_1.AbstractDisplay));
+exports.CharDisplay = CharDisplay;
 
 
 /***/ })
-/******/ ]);
+
+/******/ });

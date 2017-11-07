@@ -9,7 +9,7 @@ export class PrintBanner extends Print {
         this.banner = new Banner(string);
     }
 
-    public printWeak(){
+    public printWeak(): void{
         this.banner.showWithParen();
     }
 

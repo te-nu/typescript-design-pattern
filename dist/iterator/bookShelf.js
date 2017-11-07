@@ -71,8 +71,8 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var bookShelfIterator_1 = __webpack_require__(4);
-var bookShelfReverseIterator_1 = __webpack_require__(5);
+var bookShelfIterator_1 = __webpack_require__(5);
+var bookShelfReverseIterator_1 = __webpack_require__(6);
 var BookShelf = /** @class */ (function () {
     function BookShelf(maxsize) {
         this.last = 0;
@@ -104,7 +104,7 @@ exports.BookShelf = BookShelf;
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -133,7 +133,7 @@ exports.BookShelfIterator = BookShelfIterator;
 
 /***/ }),
 
-/***/ 5:
+/***/ 6:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
