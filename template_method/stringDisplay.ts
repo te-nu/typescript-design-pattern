@@ -12,7 +12,7 @@ export class StringDisplay extends AbstractDisplay {
         console.log("---open---")
     }
     public close() {
-
+        console.log("---close---")
     }
     public print() {
         console.log(this.st);
