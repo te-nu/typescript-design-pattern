@@ -11,12 +11,15 @@ export class StringDisplay extends AbstractDisplay {
     public open(): void {
         this.printLine();
     }
+
     public close(): void {
         this.printLine();
     }
+
     public print(): void {
         console.log("|" + this.st + "|");
     }
+
     private printLine(): void {
         console.log("+" + Array(this.st.length + 1).join("-") + "+");
     }
