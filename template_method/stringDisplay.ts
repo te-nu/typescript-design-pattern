@@ -8,13 +8,16 @@ export class StringDisplay extends AbstractDisplay {
         this.st = string;
     }
 
-    public open() {
-        console.log("---open---")
+    public open(): void {
+        this.printLine();
     }
-    public close() {
-        console.log("---close---")
+    public close(): void {
+        this.printLine();
     }
-    public print() {
-        console.log(this.st);
+    public print(): void {
+        console.log("|" + this.st + "|");
+    }
+    private printLine(): void {
+        console.log("+" + Array(this.st.length + 1).join("-") + "+");
     }
 }
