@@ -1,4 +1,4 @@
-import {Iterator} from "./iterator"
+import { Iterator } from "./iterator"
 
 export interface Aggregate {
     iterator(): Iterator;
